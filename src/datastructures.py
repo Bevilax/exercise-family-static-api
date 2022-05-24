@@ -27,9 +27,11 @@ class FamilyStructure:
         # fill this method and update the return
         pass
 
-    def get_member(self, id):
-        # fill this method and update the return
-        pass
+    def get_member(self, id: int) -> dict:
+       return list (filter(
+           lambda x: x['id'] == id,
+           self._members
+       )).pop()
 
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
